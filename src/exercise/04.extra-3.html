@@ -8,13 +8,27 @@
     <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
     <script type="text/babel">
 
-      function Message({subject, greeting}) {
+    function Message({subject, greeting}) {
         return (
             <div className="message">
             {greeting}, {subject}
             </div>
         )
-        }
+    }
+
+    const PropTypes = {
+        string(props, propName, componentName) {
+            if (typeof props[propName] !== 'string') {
+            return new Error('Invalid prop, not a string')
+            }
+        },
+    }
+
+    Message.propTypes = {
+        subject: PropTypes.string,
+        greeting: PropTypes.string,
+    }
+
   
       const element = (
         <div className="container">
