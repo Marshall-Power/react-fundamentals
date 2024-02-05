@@ -22,7 +22,7 @@ function App() {
     <div>
       <Box className='box--small' style={{backgroundColor: 'lightblue'}}> small lightblue box </Box>
       <Box className='box--medium' style={{backgroundColor: 'pink'}}> medium pink box </Box>
-      <Box className='box--large' style={{backgroundColor: 'orange'}}> big lightblue box </Box>
+      <Box className='box--large' style={{backgroundColor: 'orange'}}> big orange box </Box>
     </div>
   )
 }
